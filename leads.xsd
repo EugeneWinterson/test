@@ -3,18 +3,16 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	 elementFormDefault="qualified"
 	 attributeFormDefault="unqualified">
-	<xs:element name="LEADS">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="LEADSID" type="xs:string"/>
-				<xs:element name="PRODUCT" type="xs:string"/>
-				<xs:element name="EMAIL" type="xs:string"/>
-				<xs:element name="PHONE_MOBILE" type="xs:string"/>
-				<xs:element name="SITE_REQUEST_ID" type="xs:string"/>
-				<xs:element name="EVENT_TYPE" type="xs:string"/>
-				<xs:element name="SOURCE" type="xs:string"/>
-				<xs:element name="EVENT_DATE" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	 <xs:element name="LEAD">
+	    <xs:complexType>
+	      <xs:sequence>
+		<xs:element name="ID" type="xs:string" />
+		<xs:element name="PRODUCT" type="xs:string" />
+		<xs:element name="EMAIL" type="xs:string" />
+		<xs:element name="PHONE_MOBILE" type="xs:unsignedLong" />
+		<xs:element name="SITE_REQUEST_ID" type="xs:unsignedLong" />
+		<xs:element name="DATE_ENTERED" type="xs:string" />
+	      </xs:sequence>
+	    </xs:complexType>
+ 	 </xs:element>
 </xs:schema>
