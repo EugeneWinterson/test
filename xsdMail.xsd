@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="server" type="xs:string" minOccurs="0"/>
+				<xs:element name="from" type="xs:string" minOccurs="0"/>
+				<xs:element name="to" type="xs:string"/>
+				<xs:element name="cc" type="xs:string" minOccurs="0"/>
+				<xs:element name="replyTo" type="xs:string" minOccurs="0"/>
+				<xs:element name="subject" type="xs:string" minOccurs="0"/>
+				<xs:element name="bodyElement" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bodyCharset" type="xs:string" minOccurs="0"/>
+							<xs:choice maxOccurs="unbounded">
+								<xs:element name="bodyText" type="xs:string" minOccurs="0"/>
+								<xs:element name="fileName" type="xs:string" minOccurs="0"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="attachments" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="attachment" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="attachmentName" type="xs:string" minOccurs="0"/>
+										<xs:element name="content-type" type="xs:string" minOccurs="0"/>
+										<xs:element name="content-transfer-encoding" type="xs:string" minOccurs="0"/>
+										<xs:choice minOccurs="0" maxOccurs="1">
+											<xs:element name="textContent" type="xs:string" minOccurs="0"/>
+											<xs:element name="binaryContent" type="xs:string" minOccurs="0"/>
+											<xs:element name="fileName" type="xs:string" minOccurs="0"/>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sendRetryCount" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="xs:string"/>
+				<xs:element name="ErrorMsg" type="xs:string" minOccurs="0"/>
+				<xs:element name="SendRetryCount" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

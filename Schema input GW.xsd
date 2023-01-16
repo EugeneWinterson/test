@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/Messages_GW/Schema.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/Messages_GW/Schema.xsd"
+	 elementFormDefault="unqualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MSG" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="address" type="xs:string" minOccurs="0"/>
+							<xs:element name="branchid" type="xs:string" minOccurs="0"/>
+							<xs:element name="idmsg" type="xs:string" minOccurs="0"/>
+							<xs:element name="maxlive" type="xs:string" minOccurs="0"/>
+							<xs:element name="messagetype" type="xs:string" minOccurs="0"/>
+							<xs:element name="nextlive" type="xs:string" minOccurs="0"/>
+							<xs:element name="ord" type="xs:string" minOccurs="0"/>
+							<xs:element name="priority" type="xs:string" minOccurs="0"/>
+							<xs:element name="route" type="xs:string"/>
+							<xs:element name="text" type="xs:string" minOccurs="0"/>
+							<xs:element name="time_end" type="xs:string" minOccurs="0"/>
+							<xs:element name="time_start" type="xs:string" form="unqualified" minOccurs="0"/>
+							<xs:element name="LentaMsg" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="address" type="xs:string" minOccurs="0"/>
+										<xs:element name="nextlive" type="xs:string" minOccurs="0"/>
+										<xs:element name="text" type="xs:string" minOccurs="0"/>
+										<xs:element name="title" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PushMsg" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="address" type="xs:string" minOccurs="0"/>
+										<xs:element name="nextlive" type="xs:string" minOccurs="0"/>
+										<xs:element name="otp" type="xs:string" minOccurs="0"/>
+										<xs:element name="platform" type="xs:string" minOccurs="0"/>
+										<xs:element name="text" type="xs:string" minOccurs="0"/>
+										<xs:element name="token" type="xs:string" minOccurs="0"/>
+										<xs:element name="type" type="xs:string" minOccurs="0"/>
+											<xs:element name="data" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="deeplink" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SmsMsg" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="address" type="xs:string" minOccurs="0"/>
+										<xs:element name="nextlive" type="xs:string" minOccurs="0"/>
+										<xs:element name="sourceaddress" type="xs:string" minOccurs="0"/>
+										<xs:element name="text" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ViberMsg" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="address" type="xs:string" minOccurs="0"/>
+										<xs:element name="nextlive" type="xs:string" minOccurs="0"/>
+										<xs:element name="sourceaddress" type="xs:string" minOccurs="0"/>
+										<xs:element name="text" type="xs:string" minOccurs="0"/>
+										<xs:element name="content" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="button" type="xs:string" minOccurs="0"/>
+													<xs:element name="buttonUrl" type="xs:string" minOccurs="0"/>
+													<xs:element name="imageUrl" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="main">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="root" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

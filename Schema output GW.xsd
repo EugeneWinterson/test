@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/Messages_GW/Schema.xsd2"
+	 targetNamespace="http://www.tibco.com/schemas/Messages_GW/Schema.xsd2"
+	 elementFormDefault="unqualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="error" type="xs:string"/>
+				<xs:element name="errtext" type="xs:string" minOccurs="0"/>
+				<xs:element name="RMSG" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="error" type="xs:string"/>
+							<xs:element name="errtext" type="xs:string" minOccurs="0"/>
+							<xs:element name="id" type="xs:string" minOccurs="0"/>
+							<xs:element name="idmsg" type="xs:string" minOccurs="0"/>
+							<xs:element name="ord" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RMSG">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="error" type="xs:string"/>
+				<xs:element name="errtext" type="xs:string" minOccurs="0"/>
+				<xs:element name="id" type="xs:string" minOccurs="0"/>
+				<xs:element name="idmsg" type="xs:string" minOccurs="0"/>
+				<xs:element name="ord" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="main">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="root" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

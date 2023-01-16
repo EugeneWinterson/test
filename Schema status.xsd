@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/Message_GW/Types/Schema.xsd4"
+	 targetNamespace="http://www.tibco.com/schemas/Message_GW/Types/Schema.xsd4"
+	 elementFormDefault="unqualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="error" type="xs:string"/>
+				<xs:element name="errtext" type="xs:string" minOccurs="0"/>
+				<xs:element name="StatusMsg" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="deliverymethod" type="xs:string" minOccurs="0"/>
+							<xs:element name="error" type="xs:string"/>
+							<xs:element name="id" type="xs:string"/>
+							<xs:element name="idmsg" type="xs:string" minOccurs="0"/>
+							<xs:element name="status" type="xs:string"/>
+							<xs:element name="timedeliver" type="xs:string" minOccurs="0"/>
+							<xs:element name="multideliver" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="lenta" type="xs:string" minOccurs="0"/>
+										<xs:element name="push" type="xs:string" minOccurs="0"/>
+										<xs:element name="sms" type="xs:string" minOccurs="0"/>
+										<xs:element name="viber" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="multistatus" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="lenta" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="acceptd" type="xs:string" minOccurs="0"/>
+													<xs:element name="blocked" type="xs:string" minOccurs="0"/>
+													<xs:element name="deliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="err_9" type="xs:string" minOccurs="0"/>
+													<xs:element name="errcomm" type="xs:string" minOccurs="0"/>
+													<xs:element name="errtoken" type="xs:string" minOccurs="0"/>
+													<xs:element name="expired" type="xs:string" minOccurs="0"/>
+													<xs:element name="fix" type="xs:string" minOccurs="0"/>
+													<xs:element name="incomplete" type="xs:string" minOccurs="0"/>
+													<xs:element name="nouser" type="xs:string" minOccurs="0"/>
+													<xs:element name="outdated" type="xs:string" minOccurs="0"/>
+													<xs:element name="read" type="xs:string" minOccurs="0"/>
+													<xs:element name="route" type="xs:string" minOccurs="0"/>
+													<xs:element name="sdeliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="send" type="xs:string" minOccurs="0"/>
+													<xs:element name="sread" type="xs:string" minOccurs="0"/>
+													<xs:element name="sundeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="tardiness" type="xs:string" minOccurs="0"/>
+													<xs:element name="undeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="unknown" type="xs:string" minOccurs="0"/>
+													<xs:element name="unsuccessful" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="push" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="acceptd" type="xs:string" minOccurs="0"/>
+													<xs:element name="blocked" type="xs:string" minOccurs="0"/>
+													<xs:element name="deliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="err_9" type="xs:string" minOccurs="0"/>
+													<xs:element name="errcomm" type="xs:string" minOccurs="0"/>
+													<xs:element name="errtoken" type="xs:string" minOccurs="0"/>
+													<xs:element name="expired" type="xs:string" minOccurs="0"/>
+													<xs:element name="fix" type="xs:string" minOccurs="0"/>
+													<xs:element name="incomplete" type="xs:string" minOccurs="0"/>
+													<xs:element name="nouser" type="xs:string" minOccurs="0"/>
+													<xs:element name="outdated" type="xs:string" minOccurs="0"/>
+													<xs:element name="read" type="xs:string" minOccurs="0"/>
+													<xs:element name="route" type="xs:string" minOccurs="0"/>
+													<xs:element name="sdeliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="send" type="xs:string" minOccurs="0"/>
+													<xs:element name="sread" type="xs:string" minOccurs="0"/>
+													<xs:element name="sundeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="tardiness" type="xs:string" minOccurs="0"/>
+													<xs:element name="undeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="unknown" type="xs:string" minOccurs="0"/>
+													<xs:element name="unsuccessful" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="sms" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="acceptd" type="xs:string" minOccurs="0"/>
+													<xs:element name="blocked" type="xs:string" minOccurs="0"/>
+													<xs:element name="deliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="err_9" type="xs:string" minOccurs="0"/>
+													<xs:element name="errcomm" type="xs:string" minOccurs="0"/>
+													<xs:element name="errtoken" type="xs:string" minOccurs="0"/>
+													<xs:element name="expired" type="xs:string" minOccurs="0"/>
+													<xs:element name="fix" type="xs:string" minOccurs="0"/>
+													<xs:element name="incomplete" type="xs:string" minOccurs="0"/>
+													<xs:element name="nouser" type="xs:string" minOccurs="0"/>
+													<xs:element name="outdated" type="xs:string" minOccurs="0"/>
+													<xs:element name="read" type="xs:string" minOccurs="0"/>
+													<xs:element name="route" type="xs:string" minOccurs="0"/>
+													<xs:element name="sdeliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="send" type="xs:string" minOccurs="0"/>
+													<xs:element name="sread" type="xs:string" minOccurs="0"/>
+													<xs:element name="sundeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="tardiness" type="xs:string" minOccurs="0"/>
+													<xs:element name="undeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="unknown" type="xs:string" minOccurs="0"/>
+													<xs:element name="unsuccessful" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="viber" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="acceptd" type="xs:string" minOccurs="0"/>
+													<xs:element name="blocked" type="xs:string" minOccurs="0"/>
+													<xs:element name="deliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="err_9" type="xs:string" minOccurs="0"/>
+													<xs:element name="errcomm" type="xs:string" minOccurs="0"/>
+													<xs:element name="errtoken" type="xs:string" minOccurs="0"/>
+													<xs:element name="expired" type="xs:string" minOccurs="0"/>
+													<xs:element name="fix" type="xs:string" minOccurs="0"/>
+													<xs:element name="incomplete" type="xs:string" minOccurs="0"/>
+													<xs:element name="nouser" type="xs:string" minOccurs="0"/>
+													<xs:element name="outdated" type="xs:string" minOccurs="0"/>
+													<xs:element name="read" type="xs:string" minOccurs="0"/>
+													<xs:element name="route" type="xs:string" minOccurs="0"/>
+													<xs:element name="sdeliver" type="xs:string" minOccurs="0"/>
+													<xs:element name="send" type="xs:string" minOccurs="0"/>
+													<xs:element name="sread" type="xs:string" minOccurs="0"/>
+													<xs:element name="sundeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="tardiness" type="xs:string" minOccurs="0"/>
+													<xs:element name="undeliv" type="xs:string" minOccurs="0"/>
+													<xs:element name="unknown" type="xs:string" minOccurs="0"/>
+													<xs:element name="unsuccessful" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
